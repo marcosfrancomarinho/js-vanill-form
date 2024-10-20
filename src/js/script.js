@@ -61,6 +61,7 @@ button_cancel.onclick = () => {
 
 function loadingBtn(value) {
     button_loading.textContent = value ? 'carregando...' : 'enviar';
+    
 }
 
 function showPasswordUser(value) {
@@ -94,3 +95,4 @@ async function connectionServer({ email, password }) {
         }
     }
 }
+
