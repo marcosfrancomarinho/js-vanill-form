@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+    background-color: #c0c0c0c0;
+    height: 100vh;
+    font-size: 62.5%;
+}
+
+header {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-content: center;
+    position: relative;
+}
+
+header>a {
+    font-size: 3.5em;
+    color: white;
+    padding: 5px;
+}
+
+header>nav {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+    align-items: center;
+}
+
+header>nav>a {
+    font-size: 2em;
+    color: white;
+    transition: all 0.6s;
+    opacity: 0.9;
+}
+
+header>nav>a:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+.show {
+    display: flex;
+}
+
+header>button {
+    width: 50px;
+    height: 40px;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    header>nav>a {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width:500px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header>nav {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+
+    header>nav>a:hover {
+        transform: translateY(0px);
+    }
+
+    header>button {
+        display: flex;
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+main>form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 1px 3px 5px 0px gray;
+}
+
+main>form>.container-form {
+    display: flex;
+    padding: 5px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+main>form>.container-form>label {
+    font-size: 2em;
+}
+
+main>form>.container-form>input {
+    font-size: 2em;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px rgb(193, 187, 187) solid;
+}
+
+main>form>.container-form>input:focus {
+    border-color: blue;
+}
+
+main>form>.group-btn {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main>form>.container-form>.show-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+main>form>.group-btn>button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5em;
+    opacity: 0.9;
+    transition: all 0.6s;
+    font-weight: 600;
+}
+
+main>form>.group-btn>button:hover {
+    opacity: 1;
+    transform: translateY(-1.2px);
+}
+
+main>form>.group-btn>button:active {
+    box-shadow: -1px -1px 1px 1px black;
+}
+
+main>form>.group-btn>.btn-reset {
+    background-color: red;
+}
+
+main>form>.title {
+    font-size: 2em;
+    padding: 10px;
+}
+
+main>form>.group-btn>.btn-submit {
+    background-color: green;
+}
+
+@media screen and (max-width:600px) {
+    main>form>.container-form>label {
+        font-size: 1.8em;
+    }
+
+    main>form>.container-form>input {
+        font-size: 1.8em;
+    }
+
+    main>form>.group-btn>button:hover {
+        transform: translateY(0);
+    }
+}
